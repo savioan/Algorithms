@@ -7,12 +7,12 @@ private:
 	/*
 	* Total capacity
 	*/
-	int _capacity;
+	uint32_t _capacity;
 
 	/*
 	* Current stack size
 	*/
-	int _size;
+	uint32_t _size;
 
 	/*
 	* Elements are the stored items on stack

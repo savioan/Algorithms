@@ -94,9 +94,9 @@ inline bool Stack<T>::is_full() const {
 
 template<typename T>
 inline const T& Stack<T>::operator[](uint32_t index) const {
-	if (index >= _capacity){}
+	if (index >= _capacity) {
 		throw index_out_of_bound_exception;
-
+	}
 	return _elements[_size - 1 - index];
 }
 
