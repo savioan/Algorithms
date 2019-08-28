@@ -1,78 +1,81 @@
 #include <stdint.h>
 
-template<typename T=uintptr_t>
-class Stack {
-private:
+namespace Algorithms {
 
-	/*
-	* Total capacity
-	*/
-	uint32_t _capacity;
+	template<typename T = uintptr_t>
+	class Stack {
+	private:
 
-	/*
-	* Current stack size
-	*/
-	uint32_t _size;
+		/*
+		* Total capacity
+		*/
+		uint32_t _capacity;
 
-	/*
-	* Elements are the stored items on stack
-	*/
-	T* _elements;
+		/*
+		* Current stack size
+		*/
+		uint32_t _size;
 
-	/*
-	* Copy Constructor
-	*/
-	Stack(const Stack&);
+		/*
+		* Elements are the stored items on stack
+		*/
+		T* _elements;
 
-	/*
-	* Assignment operator
-	*/
-	Stack& operator=(const Stack&);
+		/*
+		* Copy Constructor
+		*/
+		Stack(const Stack&);
 
-public:
+		/*
+		* Assignment operator
+		*/
+		Stack& operator=(const Stack&);
 
-	/*
-	* Capacity is the maximum elements the stack can hold
-	*/
-	Stack(uint32_t capacity);
+	public:
 
-	/*
-	* Deconstructor
-	*/
-	virtual ~Stack();
+		/*
+		* Capacity is the maximum elements the stack can hold
+		*/
+		Stack(uint32_t capacity);
 
-	/*
-	* Push an element into the stack
-	*/
-	inline bool push(const T& item);
+		/*
+		* Deconstructor
+		*/
+		virtual ~Stack();
 
-	/*
-	* Remove the top element from the stack
-	*/
-	inline void pop();
+		/*
+		* Push an element into the stack
+		*/
+		inline bool push(const T& item);
 
-	/*
-	* Get the top element from the stack
-	*/
-	inline const T& top() const;
-	
-	/*
-	* Return the size of the stack.
-	*/
-	inline uint32_t count() const;
-	
-	/*
-	* Return if the stack is empty.
-	*/
-	inline bool is_empty() const;
+		/*
+		* Remove the top element from the stack
+		*/
+		inline void pop();
 
-	/*
-	* Return if the stack is full.
-	*/
-	inline bool is_full() const;
+		/*
+		* Get the top element from the stack
+		*/
+		inline const T& top() const;
 
-	/*
-	* Return an element from the stack by index
-	*/
-	inline const T& operator[](uint32_t index) const;
-};
+		/*
+		* Return the size of the stack.
+		*/
+		inline uint32_t count() const;
+
+		/*
+		* Return if the stack is empty.
+		*/
+		inline bool is_empty() const;
+
+		/*
+		* Return if the stack is full.
+		*/
+		inline bool is_full() const;
+
+		/*
+		* Return an element from the stack by index
+		*/
+		inline const T& operator[](uint32_t index) const;
+	};
+}

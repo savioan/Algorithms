@@ -1,88 +1,91 @@
 #include <stdint.h>
 
-template <class T=uintptr_t>
-class Queue {
-private:
+namespace Algorithms {
 
-	/*
-	* Total capacity
-	*/
-	uint32_t _capacity;
+	template <class T = uintptr_t>
+	class Queue {
+	private:
 
-	/*
-	* Current queue size;
-	*/
-	uint32_t _size;
+		/*
+		* Total capacity
+		*/
+		uint32_t _capacity;
 
-	/*
-	* Index of the first element;
-	*/
-	uint32_t _first;
+		/*
+		* Current queue size;
+		*/
+		uint32_t _size;
 
-	/*
-	* Index of the last element;
-	*/
-	uint32_t _last;
+		/*
+		* Index of the first element;
+		*/
+		uint32_t _first;
 
-	/*
-	* Elements are the stored items on queue
-	*/
-	T* _elements;
+		/*
+		* Index of the last element;
+		*/
+		uint32_t _last;
 
-	/*
-	* Copy Constructor
-	*/
-	Queue(const Queue&);
+		/*
+		* Elements are the stored items on queue
+		*/
+		T* _elements;
 
-	/*
-	* Assignment operator
-	*/
-	Queue& operator=(const Queue&);
+		/*
+		* Copy Constructor
+		*/
+		Queue(const Queue&);
 
-public:
+		/*
+		* Assignment operator
+		*/
+		Queue& operator=(const Queue&);
 
-	/*
-	* Capacity is the maximum elements the queue can hold
-	*/
-	Queue(uint32_t capacity);
+	public:
 
-	/*
-	* Deconstructor
-	*/
-	virtual ~Queue();
+		/*
+		* Capacity is the maximum elements the queue can hold
+		*/
+		Queue(uint32_t capacity);
 
-	/*
-	* Add an element into the queue
-	*/
-	bool enqueue(const T& item);
+		/*
+		* Deconstructor
+		*/
+		virtual ~Queue();
 
-	/*
-	* Remove an element from the queue
-	*/
-	void dequeue();
+		/*
+		* Add an element into the queue
+		*/
+		bool enqueue(const T& item);
 
-	/*
-	* Remove the first element
-	*/
-	const T& GetFirst() const;
+		/*
+		* Remove an element from the queue
+		*/
+		void dequeue();
 
-	/*
-	* Remove the last element
-	*/
-	const T& GetLast() const;
+		/*
+		* Remove the first element
+		*/
+		const T& GetFirst() const;
 
-	/*
-	* Return if the queue is empty.
-	*/
-	inline bool is_empty() const;
+		/*
+		* Remove the last element
+		*/
+		const T& GetLast() const;
 
-	/*
-	* Return if the queue is full.
-	*/
-	inline bool is_full() const;
+		/*
+		* Return if the queue is empty.
+		*/
+		inline bool is_empty() const;
 
-	/*
-	* Return the size of the queue.
-	*/
-	inline uint32_t count() const;
-};
+		/*
+		* Return if the queue is full.
+		*/
+		inline bool is_full() const;
+
+		/*
+		* Return the size of the queue.
+		*/
+		inline uint32_t count() const;
+	};
+}
