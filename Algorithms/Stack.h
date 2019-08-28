@@ -9,24 +9,20 @@ private:
 	*/
 	int _capacity;
 
-
 	/*
 	* Current stack size
 	*/
 	int _size;
-
 
 	/*
 	* Elements are the stored items on stack
 	*/
 	T* _elements;
 
-
 	/*
 	* Copy Constructor
 	*/
 	Stack(const Stack&);
-
 
 	/*
 	* Assignment operator
@@ -40,18 +36,15 @@ public:
 	*/
 	Stack(uint32_t capacity);
 
-
 	/*
 	* Deconstructor
 	*/
 	virtual ~Stack();
 
-
 	/*
 	* Push an element into the stack
 	*/
 	inline bool push(const T& item);
-
 
 	/*
 	* Remove the top element from the stack
@@ -63,24 +56,20 @@ public:
 	*/
 	inline const T& top() const;
 	
-
 	/*
 	* Return the size of the stack.
 	*/
 	inline uint32_t count() const;
 	
-
 	/*
 	* Return if the stack is empty.
 	*/
 	inline bool is_empty() const;
 
-
 	/*
 	* Return if the stack is full.
 	*/
 	inline bool is_full() const;
-
 
 	/*
 	* Return an element from the stack by index
