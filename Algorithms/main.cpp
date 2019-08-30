@@ -3,14 +3,16 @@
 #include "Stack.h"
 #include "Queue.h"
 #include "SingleLinkedList.h"
+#include "DoubleLinkedList.h"
+#include <numeric>
+#include <algorithm>
+#include <functional>
+using namespace std;
 
 using namespace Algorithms;
 
 int main()
 {
-	
-	SingleLinkedList<int> *list = new SingleLinkedList<int>;
-	list->display_list();
 
 	return 0;
 }
