@@ -8,11 +8,12 @@
 #include "SingleLinkedList.h"
 #include "DoubleLinkedList.h"
 #include "LinearSearch.cpp"
-
+#include "BinarySearch.cpp"
+using namespace Algorithms;
 
 int main()
 {
-	double arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	std::cout << Algorithms::linear_search(arr, 10, 70);
+
+
 	return 0;
 }
