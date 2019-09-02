@@ -1,10 +1,25 @@
 # Algorithms &amp; Data Structures in C++
 
-<!-- ## Data Structures
+ ## Data Structures
 
-### 1. Stack
+ ### 1. Stack
 
-### 2. Queue
+A stack is a basic data structure that can be logically thought of as a linear structure represented by a real physical stack or pile, a structure where insertion and deletion of items takes place at one end called top of the stack. The basic concept can be illustrated by thinking of your data set as a stack of plates or books where you can only take the top item off the stack in order to remove things from it. The basic implementation of a stack is also called a **LIFO (Last In First Out)** to demonstrate the way it accesses data.
+ 
+Below are some of operations a **stack** data type normally supports:  
+
+- push\
+  Adds an item onto the stack. Time complexity is **O(1)**
+- pop\
+  Removes the most-recently-pushed item from the stack. Time complexity is **O(1)**
+- top\
+  Returns the last item pushed onto the stack. Time complexity is **O(1)**
+- isEmpty\
+  True if no more items can be popped and there is no top item. Time complexity is **O(1)**
+- isFull\
+  True if no more items can be pushed. Time complexity is **O(1)**
+
+<!--### 2. Queue
 
 ### 3. SingleLinkedList
 
